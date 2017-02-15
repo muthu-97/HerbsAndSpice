@@ -1,0 +1,5 @@
+{"_id":{"$oid":"5808fab48f39aa029ce4338b"},"id":"dummy","name":"dummy","price":0,"nos":0}
+{"_id":{"$oid":"5809a5bae518e204788b82fe"},"id":"T1","name":"Tandoori Chicken","price":249,"nos":1}
+{"_id":{"$oid":"580ba1463de4dc267419812a"},"id":"R3","name":"Hydrabadi Beef Biryani","price":299,"nos":1}
+{"_id":{"$oid":"580ba15e3de4dc267419812b"},"id":"M1","name":"Badamee Kheer","price":89,"nos":1}
+{"_id":{"$oid":"580c5037d207c01f6045afe8"},"id":"A1","name":"Samose","price":99,"nos":1}

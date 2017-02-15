@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bill Payment</title>
+    <link rel="stylesheet" type="text/css" href="../Style/bootstrap.css">
+    <style type="text/css">
+        body {
+    margin-top: 20px;
+}
+    </style>
+   <script src='../JS/jquery.js'></script>
+   <script src="../JS/bill.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="well col-xs-10 col-sm-10 col-md-6 col-xs-offset-1 col-sm-offset-1 col-md-offset-3">
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6">
+                    <address>
+                        <strong>Herbs and Spice</strong>
+                        <br>
+                        P.O. Box 2012
+                        <br>
+                        Katpadi, Vellore 632015
+                        <br>
+                        <abbr title="Phone">P:</abbr> (91) 9345233220
+                    </address>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 text-right">
+                    <p>
+                        <em>Date: November,10  2016</em>
+                    </p>
+                    <p>
+                        <em>Bill #: 0000015</em>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="text-center">
+                    <h1>BILL</h1>
+                </div>
+                </span>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th class="text-center">Unit Price(Rs)</th>
+                            <th class="text-center">Total(Rs)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>   </td>
+                            <td>   </td>
+                            <td class="text-right">
+                            <p>
+                                <strong>Subtotal: </strong>
+                            </p>
+                            <p>
+                                <strong>Tax->5%: </strong>
+                            </p></td>
+                            <td class="text-center">
+                            <p id=>
+                                <strong id="subt"></strong>
+                            </p>
+                            <p>
+                                <strong id="tax"></strong>
+                            </p></td>
+                        </tr>
+                        <tr>
+                            <td>   </td>
+                            <td>   </td>
+                            <td class="text-right"><h4><strong>Total: </strong></h4></td>
+                            <td class="text-center text-danger"><h4><strong id="tot">$31.53</strong></h4></td>
+                        </tr>
+                        <br>
+                    </tbody>
+                </table>
+            </div>
+            <div class="row">
+                <div class="col-xs-4 col-sm-4 col-md-4">
+                    <address class="col">
+                        <strong >Delivery details</strong>
+                        <br>
+                        <strong id="name">Herbs and Spice</strong>
+                        <br>
+                        <p id="add"></p>
+                        <abbr title="Phone">PH:</abbr><span id="PN"></span>
+                    </address>
+                </div>
+                <div>
+                    <h1 style="text-align:center;">
+                        Thank you for your order.
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+</body>
+</html>
+
+
+
+
+

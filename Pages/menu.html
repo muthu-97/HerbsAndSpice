@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu</title>
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
+    <script type="text/javascript" src="../JS/jquery.js"></script>
+    <script type="text/javascript" src="../JS/menu.js"></script>
+    <script type=""></script>
+    <link href="../Style/menu-sidebar.css" rel="stylesheet">
+    <style type="text/css">
+    *{
+        margin: 0;
+            -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    }
+    body{background: #E7E7E7;display: flex}
+    .container{
+        left: 75px;
+        position: relative;
+        margin:5px 5%;
+        width :100%;
+        display:flex;
+        padding: 2px;
+    }
+    .product{
+        width:18%;
+        margin:20px;
+        background-color: white;
+        overflow: hidden;
+    }
+    .pdet{display: flex}
+    .pimg{
+        width: 100%;
+        margin: 2px;
+        overflow: hidden;
+        vertical-align: center;
+    }
+    .pdet{height: 80px}
+    .pname{
+        width: 70%;
+        padding: 5px 2px 0px 5px;
+        min-height: 50px;
+        float: left;
+
+    }
+    .pprice{
+        padding: 12px 5px 0  10px;
+        float: right;
+        color: #666666;
+    }
+    .actions {
+    border-top: 1px solid #ebebeb;
+    height: 55px;
+    line-height: 60px;
+    text-align: center;
+    position: relative;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.actions a{font-family: 'Bungee Inline', cursive;
+    display: block;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    color: #ff00cc;
+text-decoration: none;}
+.actions a:hover{
+    color: #0000FF;
+    background: rgba(255,255,255,0.2);
+}
+    .actions
+    img.cart-icon {
+    height: 30px;
+    border-left:1px solid #ebebeb;
+    width: 40px;
+    left: 8px;top: 8px;
+    margin-left: 5px;
+    padding-left: 10px;
+}
+
+    .cat{
+         left:75px;
+        padding-top: 400px;
+        margin-bottom: 100px;
+        position: relative;
+    }
+    .active{
+        display: none;
+    }
+
+
+    #topbar{
+        width: 1200px;
+        margin-left:150px;
+        background:url('../Images/menu/back.jpg') no-repeat;
+        z-index: 4;
+        position: fixed;
+        height: 50px;
+    }
+
+    #topbar-menu{
+        margin:5px 20px;
+        float: right;
+    }
+
+    #topbar-menu li{
+    font-style: normal;
+    color: rgb(255, 00, 208);
+    cursor: pointer;
+    float: left;
+    font-size: 20px;
+    line-height: 40px;
+    position: relative;
+    vertical-align: top;
+    text-transform: uppercase;
+    font-weight: 400;
+    list-style: none;
+    padding: 0px 20px;
+    font-family: 'Bungee Inline', cursive;
+    }
+
+
+    #topbar-menu li img {
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    margin-right: 10px;
+    position: relative;
+    top: 5px;
+}
+
+ .btn-cart {
+    padding-left: 20px;
+    position: relative;
+    top: 5px;
+    border-right: 0px;
+    display: flex;
+}
+.btn-cart a{
+    padding: 0;
+    margin: 0;
+text-decoration: none;
+}
+.cart-indicator {
+    display: none;
+    height: 23px;
+    line-height: 23px;
+    position: relative;
+    top: 0px;
+    left: -10px;
+    width: 23px;
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+    color: black;
+    padding: 3px;
+}
+.icon{
+    height: 30px;
+    max-width: 80px;
+    }
+.icons{
+height: 35px;
+}
+.total-price{
+    position: relative;
+    left:-35px;
+}
+#addpopup{
+    width:300px;
+    height:200px;
+    display:none;
+    z-index: 100;
+    position: fixed;
+    right:0;
+    top:50px;
+    animation-name: slideIn;
+    animation-duration: 0.4s;
+}
+#popcart{
+    background-color: #AAAAAA;
+    width:300px;
+    bottom:0;
+    top:50px;
+    display:none;
+    z-index: 1001;
+    position: fixed;
+    right:0;
+    animation-name: slideIn;
+    animation-duration: 0.4s;
+}
+
+@keyframes slideIn
+ {
+    from {right: -400px; opacity: 0}
+    to {right: 0; opacity: 1}
+}
+.ban{
+background-color: #222222;
+color: white;
+text-align: center;
+padding:10px;
+}
+
+#popup-data{
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    background-color: white;
+}
+
+#popcart-data{
+        margin: 10px;
+        position: fixed;
+        top:110px;
+        overflow-y : auto;
+        bottom:80px;
+}
+.popcart-indata{
+    margin: 10px
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    background-color: white;
+}
+
+#popup-data h3{color: #AAAAAA;position: relative;float:right;padding: 10px;}
+#popup-data h5{color: black;padding: 10px;}
+#popup-dc{background-color: white;align-content: center;padding: 10px;}
+#popup-dc button{background-color: #00CCCC;color:#ff00cc;padding: 12px 40px;font-size: 24px}
+
+.popcart-indata h3{color: #AAAAAA;position: relative;float:right;padding: 10px;}
+.popcart-indata h5{color: black;padding: 10px;}
+#popcart-dc{background-color: #AAAAAA;align-content: center;padding: 10px;}
+#popcart-dc button{background-color: #00CCCC;color:#ff00cc;padding: 12px 25px;font-size: 16px;bottom: 0;right:90px;position: fixed;}
+</style>
+
+</head>
+<body>
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li>
+                    <a  id="bar" href="#A"><h2>The Menu</h2></a>
+                <ul id="men">
+                    <li>
+                     <a href="#A">Appetizers</a>
+                    </li>
+                    <li>
+                        <a href="#S">Soups And Condiments</a>
+                    </li>
+                    <li>
+                        <a href="#T">Tandoori Specialties</a>
+                    </li>
+                    <li>
+                        <a href="#D">Delectable Specialties</a>
+                    </li>
+                    <li>
+                        <a href="#R">Rice Specialties</a>
+                    </li>
+                    <li>
+                        <a href="#M">Delightful Desserts</a>
+                    </li>
+                    <li>
+                        <a href="#B">Bevarages</a>
+                    </li>
+                    <li>
+                        <a href="#C">From Our Curry Pot</a>
+                    </li>
+                    <li>
+                        <a href="#V">Vegan Delights</a>
+                    </li>
+                </ul>
+                </li>
+            </ul>
+        </div>
+        <div id="topbar">
+        <ul id="topbar-menu">
+        <li id="js-btn-signin" class="btn-signin">
+            <img class="icon" src="../Images/menu/user.png"></img>
+                <span class="greeting">Log in</span>
+        </li>
+        <li id="js-btn-cart" class="btn-cart">
+         <span class="hidden">Cart</span>
+            <img class="icons" src="../Images/menu/cart.png"></imh>
+            <div class="cart-indicator" style="display: block;">
+                <span>0</span>
+            </div>
+        </li>
+        <li id="js-total-price" class="total-price"></li>
+    </ul>
+        </div>
+        <div id ="content"></div>
+</body>
+</html>
+
+
+
+<div id='addpopup'>
+<div class='ban'>
+<h1> ITEM ADDED</h1>
+</div>
+<div id='popup-dc'>
+<div id ='popup-data'>
+    <img width ='50px'; height="50px" src="" >
+    <h5>  1  </h5>
+    <h3>Rs.</h3>
+</div>
+<center>
+<div>
+    <button onclick="viewCart();$(this).hide();">View Cart</button>
+</div>
+</center>
+</div>
+</div>
+
+<div id='popcart'>
+<div class='ban'>
+<h1> THE CART</h1>
+</div>
+<div id='popcart-dc'>
+<div id ='popcart-data'>
+</div>
+
+<div >
+
+    <button onclick="finishJob()">Check Out</button>
+</div>
+
+</div>
+</div>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Simple Sidebar - Start Bootstrap Template</title>
+
+    <!-- Custom CSS -->
+    <link href="Style/simple-sidebar.css" rel="stylesheet">
+	<link rel="stylesheet" href="Style/footer-distributed-with-address-and-phones.css">
+    <script type="text/javascript" src='JS/jquery.js'></script>
+<style>
+*{margin: 0;
+padding: 0;}
+body
+{
+background-image: url("Images/bg2.jpg");
+}
+
+
+.content{
+    margin:10% 20px 10% 20%;
+    padding: 10px;
+}
+.innerc{
+display: flex;
+padding: 10px;
+}
+.innerc a{width:18%;padding: 10px;}
+.innerc img{
+padding: 10px;
+    max-width: 100%;
+overflow: hidden;}
+
+#form-login{
+        width: 440px;
+   height:25px;
+        color: #ff0;
+        border-radius: 0px 0px 15px 15px;
+   margin: 0px auto;
+   padding: 5px 5px 5px 10px ;
+        position:relative;
+        top:0px;
+        left:440px;
+        background: #000
+
+}
+
+#log{ background-color: #5DADE2;border-style: solid; border-width: 5px; font-family: Tahoma; font-size:110%; font:bold;border-color:black;}
+}
+</style>
+</head>
+
+<body>
+
+		<!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand" style="transform: skew(0,0); margin-bottom:40px; background-color:black;">
+                    <a href="#"> <i>
+                        Herb and Spice</i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Food</a>
+                </li>
+                <li>
+                    <a href="#">Specials</a>
+                </li>
+                <li>
+                    <a href="#">About us</a>
+                </li>
+                <li>
+                    <a href="Pages/login.html">login</a>
+                </li>
+                <li>
+                    <a href="#">Feedback</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+<div class="content">
+<div class="innerc">
+    <a href="Pages/menu.html#S"><img class='pimg' src="Images/home/S.jpg" ></a>
+    <a href="Pages/menu.html#C"><img class='pimg' src="Images/home/C.jpg" ></a>
+    <a href="Pages/menu.html#D"><img class='pimg' src="Images/home/D.jpg" ></a>
+    <a href="Pages/menu.html#T"><img class='pimg' src="Images/home/T.jpg" ></a>
+</div>
+<div  class="innerc">
+<a href="Pages/menu.html#A"><img class='pimg' src="Images/home/A.jpg" ></a>
+<a href="Pages/menu.html#R"><img class='pimg' src="Images/home/R.jpg" ></a>
+<a href="Pages/menu.html#M"><img class='pimg' src="Images/home/M.jpg" ></a>
+<a href="Pages/menu.html#V"><img class='pimg' src="Images/home/V.jpg" ></a>
+</div>
+<div  class="innerc">
+ <a href="Pages/menu.html#B"><img class='pimg' src="Images/home/B.jpg" ></a>
+</div></div>
+
+	<footer class="footer-distributed">
+
+			<div class="footer-left">
+
+				<h3><span>H & S</span></h3>
+
+				<p class="footer-links">
+					<a href="#">Home</a>
+					·
+					<a href="#">Blog</a>
+					·
+					<a href="#">Pricing</a>
+					·
+					<a href="#">About</a>
+					·
+					<a href="#">Faq</a>
+					·
+					<a href="#">Contact</a>
+				</p>
+
+				<p class="footer-company-name">Herb and Spice &copy; 2016</p>
+			</div>
+
+			<div class="footer-center">
+
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><span>21 Revolution Street</span> Paris, France</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+1 555 123456</p>
+				</div>
+
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:support@company.com">support@herbandspice.com</a></p>
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+
+				<p class="footer-company-about">
+					<span>About the company</span>
+					We help make life better.
+				</p>
+
+				<div class="footer-icons">
+
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-github"></i></a>
+
+				</div>
+
+			</div>
+
+		</footer>
+
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>
+

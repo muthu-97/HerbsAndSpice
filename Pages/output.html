@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Order Status</title>
+	<style type="text/css">#post
+	 {
+
+
+	  	font-size: 1.0rem;
+  		padding: 1rem 2rem;
+  		display: block;
+ 	 	background-color: #009ac9;
+  		border: 1px solid transparent;
+	    color: #ffffff;
+	    font-weight: 100;
+        -webkit-border-radius: 3px;
+  		border-radius: 3px;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+	 }
+	 #post:hover {	background-color: lightblue;
+  						color: #009ac9;
+  						border-color: #009ac9;}
+</style>
+	<script type="text/javascript" src="../JS/jquery.js"> </script>
+
+</head>
+<body>
+<div style="display:flex;">
+	<div style="width:40%;margin-left:5%;margin-right:5%;">
+		<h2>Your Pincode</h2>
+		<div>
+		Your Nearest Restaurant<br>
+		<input type="number" name="pincode"><button>Search</button>
+		</div>
+
+		<div>
+		<h2 style="margin-top:25px;margin-bottom:5px;">Pickup Method</h2><br>
+		<input type="radio" name="method" value="method">PICK-UP
+  		<input type="radio" name="method" value="DELIVER"> DELIVER<br><br>
+		</div>
+		<div>
+		<h2 style="margin-top:5px;margin-bottom:3px;">Payment Method</h2><br>
+		<input type="radio" name="pm" value="CARD">CARD
+  		<input type="radio" name="pm" value="COD">CASH ON DELIVERY<br>
+		</div>
+		<h2 style="margin-top:25px;margin-bottom:5px;">Receipt Confirmation</h2><br>
+		<div>
+		<input type="text" name="pincode"><button>Search</button>
+		</div>
+
+
+	</div>
+<div style="width:60%">
+		<h2>Your Order</h2>
+		<hr>
+		<ul><div id=1><li><h3>Chicken Garam Masala&emsp;&emsp;Rs.120<img onclick="$('#1').hide();" src="1.png" height="20px" width=20px;>  </h3>
+		</li></div>
+		<div id=2><li><h3>Chicken Garam Masala&emsp;&emsp;Rs.120<img onclick="$('#2').hide();" src="1.png" height="20px" width=20px;>  </h3>
+		</li></div>
+		<div id=3><li><h3>Chicken Garam Masala&emsp;&emsp;Rs.120<img onclick="$('#3').hide();" src="1.png" height="20px" width=20px;>  </h3>
+		</li></div>
+		<div id=4><li><h3>Chicken Garam Masala&emsp;&emsp;Rs.120<img onclick="$('#4').hide();" src="1.png" height="20px" width=20px;>  </h3>
+		</li></div></ol>
+
+	</div>
+</div>
+<div style="background-color: lightblue; float:left;height:10%;position: fixed;width: 100%;bottom: 0;"><center><h2>SUBTOTAL&emsp;&emsp;<input id=post type="button" name="po" value="Place Order"></h2></center></div>
+</body>
+</html>

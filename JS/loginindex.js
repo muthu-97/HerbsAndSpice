@@ -1,6 +1,6 @@
 $(document).ready(function(){
   $.ajax({
-        url: "http://localhost:5000/logout",
+        url: "https://herbs-and-spices.herokuapp.com/logout",
         dataType: "jsonp",
         jsonpCallback: "logout",
         type:'GET',
@@ -25,7 +25,7 @@ function checklogin()
 
      console.log('check login sending ajax');
      $.ajax({
-        url: "http://localhost:5000/login/" +user+'/'+pass,
+        url: "https://herbs-and-spices.herokuapp.com/login/" +user+'/'+pass,
         dataType: "jsonp",
         jsonpCallback: "logdone",
         type:'GET',
@@ -84,7 +84,7 @@ window.checkregister=function ()
         return false;
     }
 $.ajax({
-  url: "http://localhost:5000/signup/"+name+'/'+email+'/'+pass+'/'+pn+'/'+ad,
+  url: "https://herbs-and-spices.herokuapp.com/signup/"+name+'/'+email+'/'+pass+'/'+pn+'/'+ad,
   dataType: "jsonp",
   jsonpCallback: 'backcall',
   type:'GET'

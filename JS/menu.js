@@ -93,7 +93,7 @@ all=[data.array[0].id,data.array[1].id,data.array[2].id,data.array[3].id,data.ar
 function doi()
 {
 $.ajax({
-  url: "http://localhost:5000/api",
+  url: "https://herbs-and-spices.herokuapp.com/api",
   dataType: "jsonp",
   jsonpCallback: 'jsonCallback',
   type:'GET',
@@ -109,7 +109,7 @@ function addtocart(id, name, price){
   var nos=$(('#'+id+' > select')).val();
   console.log(nos);
   $.ajax({
-  url: "http://localhost:5000/addcart/"+id+'/'+name+'/'+price+'/'+nos,
+  url: "https://herbs-and-spices.herokuapp.com/addcart/"+id+'/'+name+'/'+price+'/'+nos,
   dataType: "jsonp",
   jsonpCallback: 'popup',
   type:'GET',
@@ -140,7 +140,7 @@ function popup(data)
 
   function updateIt(){
   $.ajax({
-  url: "http://localhost:5000/getactiveuser",
+  url: "https://herbs-and-spices.herokuapp.com/getactiveuser",
   dataType: "jsonp",
   jsonpCallback: 'updatecart',
   type:'GET',
@@ -187,7 +187,7 @@ function viewCart(){
 
 function finishJob(){
   $.ajax({
-  url: "http://localhost:5000/pushorder",
+  url: "https://herbs-and-spices.herokuapp.com/pushorder",
   dataType: "jsonp",
   jsonpCallback: 'pushorder',
   type:'GET',

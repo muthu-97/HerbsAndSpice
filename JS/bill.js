@@ -1,6 +1,6 @@
 $(document).ready(function(){
  $.ajax({
-  url: "http://localhost:5000/getactiveuser",
+  url: "https://herbs-and-spices.herokuapp.com/getactiveuser",
   dataType: "jsonp",
   jsonpCallback: 'populate',
   type:'GET',
@@ -26,7 +26,7 @@ $('#tax').html("Rs."+(0.05*tot));
 $('#tot').html("Rs." +(tot+(0.05*tot)));
 
  $.ajax({
-  url: "http://localhost:5000/logout",
+  url: "https://herbs-and-spices.herokuapp.com/logout",
   dataType: "jsonp",
   jsonpCallback: 'd',
   type:'GET',

@@ -122,6 +122,7 @@ function addtocart(id, name, price){
 
 function popup(data)
 {
+  if(data.login==-1){alert("Login to add items to cart!");return;}
     var id=data.id;
     var nos = data.nos;
     var price = data.price;
@@ -149,13 +150,14 @@ function popup(data)
 
 function updatecart(data){
 bigCart=data;
-$('.greeting').html(bigCart.array[0].name);
+if(bigCart.valid==-1){alert("Login to order");return;}
+$('.greeting').html(bigCart.name);
 var tot=0;
-if(bigCart.array[0].order){
-$('.cart-indicator span').text(bigCart.array[0].order.length);
+if(bigCart.order){
+$('.cart-indicator span').text(bigCart.order.length);
 
-for (var i = 0; i < bigCart.array[0].order.length; i=i+1) {
-  tot+=parseInt(bigCart.array[0].order[i].total);
+for (var i = 0; i < bigCart.order.length; i=i+1) {
+  tot+=parseInt(bigCart.order[i].total);
 }
 if(tot!=0)
 $('#js-total-price').text('Rs. '+tot);}
@@ -164,15 +166,17 @@ $('#js-total-price').text('Rs. '+tot);}
 
 function viewCart(){
   $('#popcart-data').empty();
-  for(var i=0;i<bigCart.array[0].order.length;i++)
+  if(bigCart.valid==-1){alert("Login to view cart");return;}
+  if(bigCart.order){
+  for(var i=0;i<bigCart.order.length;i++)
   {
   var str= '<div class="popcart-indata">'+
-    '<img width ="50px"; height="50px" src="../Images/menu/'+bigCart.array[0].order[i].id+'.jpg" >'+
-    '<h5>'+bigCart.array[0].order[i].nos+'     '+bigCart.array[0].order[i].name+' </h5>'+
-    '<h3>Rs.'+bigCart.array[0].order[i].total+'</h3></div>';
+    '<img width ="50px"; height="50px" src="../Images/menu/'+bigCart.order[i].id+'.jpg" >'+
+    '<h5>'+bigCart.order[i].nos+'     '+bigCart.order[i].name+' </h5>'+
+    '<h3>Rs.'+bigCart.order[i].total+'</h3></div>';
   $('#popcart-data').append(str);
   }
-
+}
    $('#popcart').show();
    $("#addpopup").hide();
     setTimeout(function() {

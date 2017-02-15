@@ -70,8 +70,9 @@ MongoClient.connect("mongodb://muthu-97:Iamadev97@ds023902.mlab.com:23902/hotel"
 
         });
   });
-    app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname + '/pages/index.html'));
+
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname + '/Pages/index.html'));
 });
 app.get('/Style/:in', function(req, res) {
     res.sendFile(path.join(__dirname + '/Style/'+req.params.in));
@@ -85,7 +86,7 @@ app.get('/Images/:in', function(req, res) {
 app.get('/JS/:in', function(req, res) {
     res.sendFile(path.join(__dirname + '/JS/'+req.params.in));
 });
-app.get('/pages/:in', function(req, res) {
+app.get('/Pages/:in', function(req, res) {
     res.sendFile(path.join(__dirname + '/Pages/'+req.params.in));
 });
 

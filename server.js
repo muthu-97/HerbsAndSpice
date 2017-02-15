@@ -3,7 +3,7 @@ var app = express();
 var assert = require('assert');
 app.set('port', (process.env.PORT || 5000));
 var path = require('path');
-app.use(express.static(__dirname + "/public"));
+app.use(express.static('public'));
 var session = require('client-sessions');
 app.use(session({
   cookieName: 'session',

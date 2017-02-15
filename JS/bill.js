@@ -18,9 +18,9 @@ for (var i = 0; i < data.order.length; i=i+1) {
 '<td class="col-md-1 text-center">'+data.order[i].total+'</td>      </tr>'
 }
 $('tbody').html(str+$('tbody').html());
-$('#name').html(data.array[0].name);
-$('#add').html(data.array[0].add);
-$('#PN').html(data.array[0].phone);
+$('#name').html(data.name);
+$('#add').html(data.add);
+$('#PN').html(data.phone);
 $('#subt').html("Rs."+tot);
 $('#tax').html("Rs."+(0.05*tot));
 $('#tot').html("Rs." +(tot+(0.05*tot)));

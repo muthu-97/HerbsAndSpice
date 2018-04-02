@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 var assert = require('assert');
-app.set('port', (process.env.PORT || 5000));
+var port = (process.env.PORT || 5000);
 var path = require('path');
 app.use(express.static('public'));
 var session = require('client-sessions');
@@ -90,9 +90,11 @@ app.get('/Pages/:in', function(req, res) {
     res.sendFile(path.join(__dirname + '/Pages/'+req.params.in));
 });
 
-app.listen(app.get('port'), function() {
-  console.log('Node app is running on port', app.get('port'));
+app.listen(port,function() {
+    console.log("App is running on port " + port);
 });
+console.log("Server running in " + port );
+
 
 
   app.get('/api' , function(req,res){

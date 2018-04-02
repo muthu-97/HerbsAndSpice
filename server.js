@@ -12,7 +12,7 @@ app.use(session({
   activeDuration: 5 * 60 * 1000,
 }));
 
-
+  var MongoClient = require('mongodb').MongoClient;
   app.use(function(req, res, next) {
   if (req.session && req.session.user) {
     MongoClient.connect("mongodb://muthu-97:Iamadev97@ds023902.mlab.com:23902/hotel", function(err, db) {
@@ -38,7 +38,7 @@ app.use(session({
   }
 });
 // Retrieve
-var MongoClient = require('mongodb').MongoClient;
+
 var collection ;
 var strJson='{"array":[';
 var jsom;

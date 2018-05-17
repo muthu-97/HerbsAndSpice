@@ -84,6 +84,9 @@ app.get('/Images/:in/:out', function(req, res) {
 app.get('/Images/:in', function(req, res) {
     res.sendFile(path.join(__dirname + '/Images/'+req.params.in));
 });
+app.get('/:in', function(req, res) {
+    res.sendFile(path.join(__dirname + '/'+req.params.in));
+});
 app.get('/JS/:in', function(req, res) {
     res.sendFile(path.join(__dirname + '/JS/'+req.params.in));
 });

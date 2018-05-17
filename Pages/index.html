@@ -15,6 +15,37 @@
     <link href="../Style/simple-sidebar.css" rel="stylesheet">
 	<link rel="stylesheet" href="../Style/footer-distributed-with-address-and-phones.css">
     <script type="text/javascript" src='../JS/jquery.js'></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+
+    console.log("start");
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('sw.js').then(function(registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(err) {
+          // registration failed :(
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      });
+    }
+    else
+    {
+        console.log("not supported");
+    }
+
+
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    function send_message_to_sw(msg){
+    navigator.serviceWorker.controller.postMessage("Client 1 says '"+msg+"'");
+    }
+    </script>
+
 <style>
 *{margin: 0;
 padding: 0;}
@@ -169,13 +200,7 @@ overflow: hidden;}
 		</footer>
 
 
-    <!-- Menu Toggle Script -->
-    <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-    </script>
+
 
 </body>
 
